@@ -6,8 +6,12 @@
 const listOfCategories = document.querySelectorAll("li.item");
 console.log(`Number of categories ${listOfCategories.length}`);
 const categoriesGroup = listOfCategories.forEach((category) => {
-    console.log("Category:", category.firstElementChild.textContent);
-    console.log("Elements:", category.querySelectorAll("li").length);
+    console.log({
+        Category: category.firstElementChild.textContent,
+        Elements: category.lastElementChild.childElementCount,
+    });
+    // console.log("Category:", category.firstElementChild.textContent);
+    // console.log("Elements:", category.querySelectorAll("li").length);
 });
 // В результаті, в консолі будуть виведені наступні повідомлення.
 // Number of categories: 3

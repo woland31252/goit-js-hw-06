@@ -1,5 +1,6 @@
 // Напиши скрипт управління формою логіна.
-
+console.log(document)
+console.dir(document)
 const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', handleSubmit);
