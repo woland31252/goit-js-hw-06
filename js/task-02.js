@@ -1,4 +1,5 @@
-
+console.log(document);
+console.dir(document);
 // HTML містить порожній список ul#ingredients.
 // JavaScript містить масив рядків.
 const ingredients = [
@@ -10,11 +11,13 @@ const ingredients = [
   'Condiments',
 ];
 const ulList = document.getElementById("ingredients");
-for (const ingredient of ingredients) {
-  const liElem = document.createElement("li");
-  liElem.textContent = ingredient;
-  ulList.append(liElem);
-};
+const liElem = ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("");
+ulList.insertAdjacentHTML("beforeend", liElem);
+// for (const ingredient of ingredients) {
+//   const liElem = document.createElement("li");
+//   liElem.textContent = ingredient;
+//   ulList.append(liElem);
+// };
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
 
